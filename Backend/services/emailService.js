@@ -190,6 +190,11 @@ Reply to this email to respond to ${emailData.name}
 
   } catch (error) {
     console.error('❌ Error sending email:', error);
+    console.error('Email config:', {
+      service: process.env.EMAIL_SERVICE,
+      user: process.env.EMAIL_USER,
+      hasPassword: !!process.env.EMAIL_PASSWORD
+    });
     throw new Error('Failed to send email: ' + error.message);
   }
 };
