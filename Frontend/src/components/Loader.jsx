@@ -39,7 +39,7 @@ const Loader = () => {
             repeat: Infinity,
           }}
         >
-          Loading Dhamaal... 🚀
+          Loading Portfolio... 🚀
         </motion.h2>
       </div>
     </motion.div>
