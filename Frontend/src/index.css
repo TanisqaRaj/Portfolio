@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-cartoon-sky via-neutral-light font-sans text-neutral-dark;
+    background-image: linear-gradient(to bottom right, #87CEEB, #FFF8DC, rgba(255, 215, 0, 0.2));
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-orange to-primary-red text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-primary-blue to-cartoon-purple text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300;
+  }
+  
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-orange via-primary-red to-primary-blue bg-clip-text text-transparent;
+  }
+  
+  .blob-shadow {
+    filter: drop-shadow(0 10px 30px rgba(255, 140, 0, 0.3));
+  }
+}
