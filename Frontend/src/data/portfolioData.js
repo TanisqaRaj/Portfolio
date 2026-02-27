@@ -85,8 +85,8 @@ export const projects = [
       "A modern, fully responsive personal portfolio built with React, Tailwind CSS, and Framer Motion. Features smooth animations, playful UI, and optimized performance.",
     image: "🎨",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://portfolio-five-kohl-m5932efrjx.vercel.app/",
+    githubLink: "https://github.com/TanisqaRaj/Portfolio",
     color: "from-cartoon-purple to-primary-red"
   }
 ];
