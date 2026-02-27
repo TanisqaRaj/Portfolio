@@ -1,11 +1,14 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { personalInfo, socialLinks } from '../data/portfolioData';
-import profilePic from '../assets/profile.jpeg'; 
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { personalInfo, socialLinks } from "../data/portfolioData";
+import profilePic from "../assets/profile.jpeg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center pt-20"
+    >
       <div className="section-container text-center">
         {/* Animated emoji/avatar */}
         <motion.div
@@ -14,8 +17,8 @@ const Hero = () => {
           transition={{ type: "spring", duration: 1 }}
           className="mb-8"
         >
-          <img 
-            src={profilePic} 
+          <img
+            src={profilePic}
             alt={personalInfo.name}
             className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full object-cover shadow-2xl animate-float shadow-2xl"
           />
@@ -28,8 +31,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4"
         >
-          Hi, I'm{' '}
-          <span className="text-gradient">{personalInfo.name}</span>
+          Hi, I'm <span className="text-gradient">{personalInfo.name}</span>
         </motion.h1>
 
         {/* Title */}
@@ -63,7 +65,9 @@ const Hero = () => {
             href="#projects"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+              document
+                .querySelector("#projects")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
@@ -75,7 +79,9 @@ const Hero = () => {
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+              document
+                .querySelector("#contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="btn-secondary"
             whileHover={{ scale: 1.05 }}
@@ -93,8 +99,16 @@ const Hero = () => {
           className="flex gap-6 justify-center"
         >
           {[
-            { icon: FaGithub, link: socialLinks.github, color: 'hover:text-gray-800' },
-            { icon: FaLinkedin, link: socialLinks.linkedin, color: 'hover:text-blue-600' },
+            {
+              icon: FaGithub,
+              link: socialLinks.github,
+              color: "hover:text-gray-800",
+            },
+            {
+              icon: FaLinkedin,
+              link: socialLinks.linkedin,
+              color: "hover:text-blue-600",
+            },
             // { icon: FaTwitter, link: socialLinks.twitter, color: 'hover:text-blue-400' },
           ].map((social, index) => (
             <motion.a
@@ -117,8 +131,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        >
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );
