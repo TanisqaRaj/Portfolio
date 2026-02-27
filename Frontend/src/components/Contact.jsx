@@ -115,7 +115,7 @@ const Contact = () => {
       }, 5000);
       
     } catch (error) {
-      console.error('❌ Error submitting form:', error);
+      console.error('Error submitting form:', error);
       setErrors({ 
         submit: error.message || 'Failed to send message. Please try again or email me directly.' 
       });
