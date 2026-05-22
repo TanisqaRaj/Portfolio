@@ -19,22 +19,14 @@ export const sendContactEmail = async (req, res, next) => {
     };
 
     // Send email
-    const emailResult = await sendEmail(emailData);
+    await sendEmail(emailData);
 
-    // Optional: Save to database (uncomment if you have a database)
-    // await saveContactToDatabase(emailData);
-
-    // Log the contact submission
     console.log(`📧 Contact form submission from: ${name} (${email})`);
 
-    // Send success response
     res.status(200).json({
       status: 'success',
       message: 'Your message has been sent successfully! I\'ll get back to you soon.',
-      data: {
-        messageId: emailResult.messageId,
-        timestamp: emailData.timestamp
-      }
+      data: { timestamp: emailData.timestamp }
     });
 
   } catch (error) {
