@@ -11,15 +11,17 @@ const createTransporter = () => {
   if (process.env.EMAIL_SERVICE === 'gmail') {
     return nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD
       },
       tls: {
         rejectUnauthorized: false
-      }
+      },
+      connectionTimeout: 10000,
+      socketTimeout: 10000
     });
   }
 
